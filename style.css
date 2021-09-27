@@ -1,0 +1,117 @@
+* {
+    margin: auto;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Mono Light', sans-serif;
+    background-color: #141414;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.sub-container {
+    box-sizing: border-box;
+    width: 40%;
+    text-align: center;
+    background-color: #212121;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.input-word {
+    box-sizing: border-box;
+    width: calc(65% - 1rem);
+    background-color: #303030;
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+}
+
+.btn {
+    box-sizing: border-box;
+    width: calc(35% - 1rem);
+    border: 0;
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: rgb(18, 155, 18);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Result */
+
+.result {
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.palindromeTrue {
+    animation: wordTransition ease-out 2s;
+    animation: pTrue ease-out 2s;
+}
+
+.palindromeFalse {
+    animation: wordTransition ease-out 2s;
+    animation: pFalse ease-out 2s;
+}
+
+/* Animation Word transition */
+
+@keyframes wordTransition {
+    0%{
+        color: transparent;
+    }
+    50%{
+        color: rgb(255, 255, 255, .5);
+    }
+    100%{
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* Animation Modal */
+
+@keyframes pTrue {
+    0%{
+        background-color: rgb(20, 20, 20, .5);
+    }
+    25%{
+        background-color: rgb(0, 160, 0, .25);
+    }
+    50%{
+        background-color: rgb(0, 160, 0, .50);
+    }
+    75%{
+        background-color: rgb(0, 160, 0, .75);
+    }
+    100%{
+        background-color: rgb(0, 160, 0);
+    }
+}
+
+@keyframes pFalse {
+    0%{
+        background-color: rgb(20, 20, 20, .5);
+    }
+    25%{
+        background-color: rgb(160, 0, 0, .25);
+    }
+    50%{
+        background-color: rgb(160, 0, 0, .50);
+    }
+    75%{
+        background-color: rgb(160, 0, 0, .75);
+    }
+    100%{
+        background-color: rgb(160, 0, 0);
+    }
+}
